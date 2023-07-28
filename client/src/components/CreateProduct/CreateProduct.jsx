@@ -20,11 +20,8 @@ import Copyright from '../utils/Copyright.js'
 import { useParams, useLocation, useHistory } from 'react-router-dom';
 import FormGroup from '@material-ui/core/FormGroup';
 import Checkbox from '@material-ui/core/Checkbox';
-// import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import swal from 'sweetalert';
 import { createProduct } from "../../actions";
-
-// import ImagesPreview from '../utils/ImagesPreview'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -262,8 +259,6 @@ export default function SignUp(props) {
       image: prevImages,
       category: inputs.category
     })
-    // newFiles.splice(i, 1)
-    // setFiles(newFiles)
   }
 
 
@@ -406,7 +401,6 @@ export default function SignUp(props) {
           </Button>
           :
           <Button onClick={handleSubmit}
-            //disabled={!inputs.name || !inputs.description || !inputs.price || !inputs.stock || !check || !files}
             type="submit"
             fullWidth
             variant="contained"

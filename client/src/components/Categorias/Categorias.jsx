@@ -8,14 +8,12 @@ import IconButton from '@material-ui/core/IconButton';
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../../actions";
 export default function () {
-	// const [categorias, setCategorias] = useState()
 	const url = useLocation();
 	const dispatch = useDispatch()
 	const categories = useSelector(state => state.categories)
 
 	useEffect(() => {
 		dispatch(getCategories())	
-	// }, [categories])
 	}, [dispatch])
 
 	useEffect(() => {

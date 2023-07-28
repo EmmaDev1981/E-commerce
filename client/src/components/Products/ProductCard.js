@@ -50,9 +50,6 @@ export default function ProductCard(props) {
     } else if (!logged && props.productos) {
       dispatch(addProductToGuestCart(props.productos))
     }
-    //   else {
-    //     history.push('/user/login')
-    //   }
   }
 
   const boton = url.pathname === '/admin/products/edit'
@@ -79,22 +76,8 @@ export default function ProductCard(props) {
           </IconButton>
         </Tooltip>
       </div>
-  // : url.pathname === '/admin/roducts/edit_category'
+
   //   ? (<IconButton>
-  //     <Tooltip title='Editar categoria'>
-  //       <CategoryIcon color='primary' />
-  //     </Tooltip>
-  //   </IconButton>)
-  //   : (<>
-  //     {/* <Button variant="contained" color="primary" size="small">
-  //       Comprar
-  //     </Button> */}
-  //     <Tooltip title='Añadir al carrito'>
-  //       <IconButton aria-label="addToCart" onClick={addtoCart}>
-  //         <ShoppingCartIcon color='primary' />
-  //       </IconButton>
-  //     </Tooltip>
-  //   </>)
 
   return (
     <>
@@ -102,11 +85,6 @@ export default function ProductCard(props) {
         props.productos &&
         <Card className={classes.root}>
           <Link to={`/products/${props.productos.id}`}>
-            {/* <CardHeader
-            // action={
-            //   <Rating />
-            // }
-            /> */}
             <CardMedia
               className={classes.media}
               image={`http://localhost:3001/images/${props.productos.image[0]}`}
@@ -122,9 +100,6 @@ export default function ProductCard(props) {
                 $ {props.productos.price.toFixed(2)}
               </Typography>
             </CardContent>
-          {/* <CardActions>
-            {boton}
-          </CardActions> */}
         </Card>
       }
     </>

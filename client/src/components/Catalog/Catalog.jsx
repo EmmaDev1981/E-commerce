@@ -18,28 +18,12 @@ export default function () {
 	useEffect(() => {
 		if (id) {
 			dispatch(getProductsByCategory(id))
-			// fetch(`http://localhost:3001/category/${id}`)
-			// 	.then((res) => res.json())
-			// 	.then((data) => {
-			// 		setProductos(data)
-			// 	})
 		}
 		else if (query) {
 			dispatch(getProductsBySearch(query))
-			// setProductos(products)
-			// fetch(`http://localhost:3001/products/?search=${query}`)
-			// 	.then((res) => res.json())
-			// 	.then((data) => setProductos(data))
 		}
 		else if (query === null) {
-			// fetch('http://localhost:3001/products')
-			// 	.then((res) => res.json())
-			// 	.then((data) => {
-			// 		setProductos(data)
-			// 	})
 			dispatch(getProducts())
-			// setProductos(products)
-
 		}
 	}, [query, id])
 	
